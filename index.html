@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/utilities.css" />
+  </head>
+  <body>
+    <main class="container my-3 mx-4">
+      <form action="">
+        <h1>Contact Us</h1>
+        <label for="fname" class="form-label">First Name <span>*</span></label>
+        <input type="text" name="fname" id="fname" class="form-control" />
+        <label for="lname" class="form-label">Last Name <span>*</span></label>
+        <input type="text" name="lname" id="fname" class="form-control" />
+        <label for="email" class="form-label"
+          >Email Address<span>*</span></label
+        >
+        <input type="email" name="email" id="email" class="form-control" />
+        <section>
+          <label for="query" class="form-label"
+            >Query Type <span>*</span></label
+          >
+          <div class="form-check" id="gen-enquiry-field">
+            <input
+              type="radio"
+              name="query"
+              id="gen-enquiry"
+              class="form-check-input"
+              onclick="queryClicked()"
+            />
+            <label for="gen-inquiry" class="form-check-label"
+              >General Enquiry</label
+            >
+          </div>
+          <div class="form-check" id="s-request-field">
+            <input
+              type="radio"
+              name="query"
+              id="s-request"
+              class="form-check-input"
+              onclick="queryClicked()"
+            />
+            <label for="gen-inquiry" class="form-check-label"
+              >Support Request</label
+            >
+          </div>
+        </section>
+        <label for="message" class="form-label">Message <span>*</span></label>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          class="form-control"
+        ></textarea>
+        <div class="form-check" id="consentBox">
+          <input
+            type="checkbox"
+            name="consent"
+            id="consent"
+            class="form-check-input"
+          />
+          <label for="consent" class="form-check-label" id="consent-label"
+            >I consent to being contacted by the team <span>*</span></label
+          >
+        </div>
+        <div class="d-grid" id="button-field">
+          <button class="btn btn-success btn-block">Submit</button>
+        </div>
+      </form>
+      <script src="./interactive-form.js"></script>
+    </main>
+  </body>
+</html>

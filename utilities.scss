@@ -1,0 +1,123 @@
+$light-green: hsl(148, 38%, 91%);
+$med-green: hsl(169, 82%, 27%);
+$red: hsl(0, 66%, 54%);
+
+$white: hsl(0, 100%, 100%);
+$med-grey: hsl(186, 15%, 59%);
+$dark-grey: hsl(187, 24%, 22%);
+
+$input-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+
+
+$labelSize: 16px;
+
+
+$l-weight: 400;
+$h-weight: 700;
+
+
+body {
+    background-color: $light-green;
+    margin-right: 3rem;
+    main {
+        background-color: $white;
+        border-radius: 16px;
+        form {
+            padding: 20px;
+            h1 {
+                margin-bottom: 30px;
+                color: $dark-grey;
+                font-weight: $h-weight;
+            }
+            label {
+                color: $dark-grey;
+                font-weight: $l-weight;
+                span {
+                    color: $med-green;
+                    margin-left: 7px;
+                }
+            }
+            .form-control {
+                border-color: $med-grey;  
+            }
+
+            input[type="text"], input[type="email"],
+            section {
+                margin-bottom: 20px;
+            }
+            
+            .form-control:focus {
+                border-color: $med-green;
+                //box-shadow: $input-shadow;
+                box-shadow: none;
+            }
+            textarea {
+                margin-bottom: 35px;
+                resize: none;
+            }
+            #gen-inquiry {
+                margin-bottom: 15px;
+            }
+            input[name="query"] {
+                position: relative !important;
+                left: 30px !important;
+                border-color: $med-grey;
+            }
+            input[type="radio"]:checked {
+                border: none;
+                background-color: white;
+                background-image: url("/assets/images/icon-radio-selected.svg");
+            }
+            #gen-enquiry-field {
+                margin-bottom: 15px;
+            }
+            label[for="gen-inquiry"] {
+                margin-left: 35px;
+            }
+            
+            #consent {
+                border-color: $med-grey;
+            }
+
+
+            input[type="checkbox"]:checked {
+                background-color: white;
+                border-color: $med-green;
+                background-image: url("/assets/images/icon-checkbox-check.svg");
+            }
+            div {
+                border: solid 1px $med-grey;
+                border-radius: 8px;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            
+            #consentBox {
+                margin-bottom: 30px;
+            }
+            #consentBox, #button-field {
+                border-style: none;
+            }
+            .btn {
+                padding: 15px 5px;
+                background-color: $med-green;
+                font-weight: $h-weight;
+            }
+        }
+    }
+}
+
+@media  (min-width: 588px) {
+    label[for="fname"], input[name="fname"],
+    label[for="lname"], input[name="lname"] {
+        display: inline !important;
+    }
+    label[for="lname"] {
+        position: absolute;
+        top: 100px;
+        left: 400px;
+    }
+    input[name="lname"] {
+        position: relative;
+    }
+}
