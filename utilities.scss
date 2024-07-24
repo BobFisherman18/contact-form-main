@@ -107,14 +107,14 @@ body {
             input[type="radio"]:checked {
                 border: none;
                 background-color: white;
-                background-image: url("./assets/images/icon-radio-selected.svg");
+                background-image: url("/assets/images/icon-radio-selected.svg");
             }
 
 
             input[type="checkbox"]:checked {
                 background-color: white;
                 border-color: $med-green;
-                background-image: url("./assets/images/icon-checkbox-check.svg");
+                background-image: url("/assets/images/icon-checkbox-check.svg");
             }
             div {
                 border: solid 1px $med-grey;
