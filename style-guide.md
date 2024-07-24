@@ -13,7 +13,7 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Green 200 (lighter): hsl(148, 38%, 91%)
+- Green 200 (lighter):
 - Green 600 (medium): hsl(169, 82%, 27%)
 - Red: hsl(0, 66%, 54%)
 

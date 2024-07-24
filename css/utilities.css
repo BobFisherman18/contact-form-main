@@ -1,6 +1,20 @@
 body {
+  font-family: "Karla";
   background-color: hsl(148, 38%, 91%);
-  margin-right: 3rem;
+}
+body .toast-header, body .toast-body {
+  background-color: hsl(170, 84%, 10%);
+  color: hsl(0, 100%, 100%);
+  border-bottom: none;
+  margin-right: -20px;
+}
+body .toast-body {
+  color: hsl(148, 38%, 91%);
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+body div.position-relative {
+  padding-bottom: 87px;
 }
 body main {
   background-color: hsl(0, 100%, 100%);
@@ -9,36 +23,62 @@ body main {
 body main form {
   padding: 20px;
 }
-body main form h1 {
-  margin-bottom: 30px;
+body main form h2 {
+  margin-bottom: 20px;
   color: hsl(187, 24%, 22%);
   font-weight: 700;
 }
+body main form #name-field {
+  margin-bottom: 0;
+}
+body main form #name-field #fname-field, body main form #name-field #lname-field {
+  border: none;
+  margin: 0;
+  padding-bottom: 0;
+}
+body main form #name-field #lname-field {
+  padding-top: 0;
+}
 body main form label {
   color: hsl(187, 24%, 22%);
+  font-size: 16px;
   font-weight: 400;
 }
 body main form label span {
   color: hsl(169, 82%, 27%);
   margin-left: 7px;
 }
+body main form label[for=gen-inquiry] {
+  margin-left: 35px;
+}
+body main form #q-type-field {
+  margin: 0 0 20px;
+}
+body main form #q-type-field #gen-enquiry-field {
+  margin-bottom: 15px;
+}
+body main form #q-type-field #gen-enquiry-field #gen-inquiry {
+  margin-bottom: 15px;
+}
 body main form .form-control {
   border-color: hsl(186, 15%, 59%);
-}
-body main form input[type=text], body main form input[type=email],
-body main form section {
-  margin-bottom: 20px;
 }
 body main form .form-control:focus {
   border-color: hsl(169, 82%, 27%);
   box-shadow: none;
 }
+body main form input[type=text], body main form input[type=email],
+body main form section {
+  margin-bottom: 20px;
+}
+body main form input[type=text]:hover, body main form input[type=email]:hover,
+body main form textarea:hover, body main form #gen-enquiry-field:hover, body main form #s-request-field:hover,
+body main form #consent:hover {
+  border-color: hsl(169, 82%, 27%);
+}
 body main form textarea {
   margin-bottom: 35px;
   resize: none;
-}
-body main form #gen-inquiry {
-  margin-bottom: 15px;
 }
 body main form input[name=query] {
   position: relative !important;
@@ -49,15 +89,6 @@ body main form input[type=radio]:checked {
   border: none;
   background-color: white;
   background-image: url("/assets/images/icon-radio-selected.svg");
-}
-body main form #gen-enquiry-field {
-  margin-bottom: 15px;
-}
-body main form label[for=gen-inquiry] {
-  margin-left: 35px;
-}
-body main form #consent {
-  border-color: hsl(186, 15%, 59%);
 }
 body main form input[type=checkbox]:checked {
   background-color: white;
@@ -73,6 +104,9 @@ body main form div {
 body main form #consentBox {
   margin-bottom: 30px;
 }
+body main form #consentBox #consent {
+  border-color: hsl(186, 15%, 59%);
+}
 body main form #consentBox, body main form #button-field {
   border-style: none;
 }
@@ -81,18 +115,64 @@ body main form .btn {
   background-color: hsl(169, 82%, 27%);
   font-weight: 700;
 }
+body main form .btn:hover {
+  background-color: hsl(170, 84%, 10%);
+  border-color: hsl(170, 84%, 10%);
+}
+body main form .errorStates {
+  display: none;
+  color: hsl(0, 66%, 54%);
+  margin-bottom: 24px;
+}
 
-@media (min-width: 588px) {
-  label[for=fname], input[name=fname],
-  label[for=lname], input[name=lname] {
-    display: inline !important;
+@media screen and (max-width: 376px) {
+  div.position-relative {
+    padding-bottom: 109px !important;
   }
-  label[for=lname] {
-    position: absolute;
-    top: 100px;
-    left: 400px;
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    max-width: 696px !important;
+    max-height: 41px !important;
   }
-  input[name=lname] {
-    position: relative;
+  #lname-field {
+    padding-top: 10px !important;
+  }
+  #s-request-field {
+    margin-bottom: 15px !important;
+  }
+  #gen-enquiry-field, #s-request-field {
+    width: 48.85%;
+    margin-right: 15px;
+  }
+  #s-request-field {
+    margin-right: 0;
+  }
+  #fname-field {
+    padding-right: 7px;
+  }
+  #lname-field {
+    padding-left: 7px;
+  }
+}
+@media screen and (min-width: 992px) {
+  main {
+    max-width: 696px !important;
+  }
+  main h2 {
+    max-width: 632px !important;
+  }
+  #gen-enquiry-field, #s-request-field {
+    width: 48.8%;
+    margin-right: 15px;
+  }
+  #s-request-field {
+    margin-right: 0;
+  }
+  #fname-field {
+    padding-right: 7px;
+  }
+  #lname-field {
+    padding-left: 7px;
   }
 }
